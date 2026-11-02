@@ -585,6 +585,7 @@ class Repository implements ArrayAccess, CacheContract
         $this->event(new CacheClearing($this->getName()));
         $flush = $this->store->flush();
         $this->event(new CacheCleared($this->getName()));
+
         return $flush;
     }
 
